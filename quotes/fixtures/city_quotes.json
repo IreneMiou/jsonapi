@@ -1,0 +1,16 @@
+[
+    {
+        "model":"quotes.quotes",
+        "pk":1,
+        "fields":{
+            "quote":"There’s something about arriving in new cities, wandering empty streets with no destination. I will never lose the love for the arriving, but I'm born to leave.-Charlotte Eriksson, Empty Roads & Broken Bottles"
+        }
+    },
+    {
+        "model":"quotes.quotes",
+        "pk":2,
+        "fields":{
+            "quote":"A city isn’t so unlike a person. They both have the marks to show they have many stories to tell. They see many faces. They tear things down and make new again.― Rasmenia Massoud, Broken Abroad"
+        }
+    }
+]
