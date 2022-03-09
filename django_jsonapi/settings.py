@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import os.path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -160,3 +162,12 @@ REST_FRAMEWORK = {
     #     "rest_framework_api_key.permissions.HasAPIKey",
     # ],
 }
+
+if os.path.exists(os.path.join(BASE_DIR, "/django_jsonapi/local_settings.py")):
+    print("found local settings")
+    try:
+        from django_jsonapi.local_settings import *
+    except ImportError as e:
+        print(e)
+else:
+    print("no local settings")
