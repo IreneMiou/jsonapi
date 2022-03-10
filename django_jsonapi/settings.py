@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     "quotes",
     "rest_framework",
     "rest_framework_api_key",
+    "rest_framework.authtoken",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -161,6 +163,11 @@ REST_FRAMEWORK = {
     # "DEFAULT_PERMISSION_CLASSES": [
     #     "rest_framework_api_key.permissions.HasAPIKey",
     # ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+    ],
 }
 
 if os.path.exists(os.path.join(BASE_DIR, "/django_jsonapi/local_settings.py")):

@@ -22,4 +22,8 @@ router = routers.DefaultRouter()
 router.register(r"city_quotes", views.QuotesViewSet)
 
 
-urlpatterns = [path("admin/", admin.site.urls), path("", include(router.urls))]
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", include(router.urls)),
+    path("users/", include("users.urls")),
+]
