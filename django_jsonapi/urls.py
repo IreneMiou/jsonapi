@@ -21,9 +21,9 @@ from quotes import views
 router = routers.DefaultRouter()
 router.register(r"city_quotes", views.QuotesViewSet)
 
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(router.urls)),
+    path("signup/", include("signup.urls")),
     path("users/", include("users.urls")),
 ]
