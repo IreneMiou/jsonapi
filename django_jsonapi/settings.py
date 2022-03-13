@@ -170,7 +170,7 @@ REST_FRAMEWORK = {
     ],
 }
 
-if os.path.exists(os.path.join(BASE_DIR, "/django_jsonapi/local_settings.py")):
+if os.path.exists(os.path.join(BASE_DIR, "django_jsonapi/local_settings.py")):
     print("found local settings")
     try:
         from django_jsonapi.local_settings import *
